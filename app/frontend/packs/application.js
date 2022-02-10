@@ -11,3 +11,5 @@ ActiveStorage.start()
 
 import '../styles/aplication.scss'
 const images = require.context('../images', true)
+
+import 'bootstrap/dist/js/bootstrap'

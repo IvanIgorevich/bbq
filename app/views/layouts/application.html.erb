@@ -1,16 +1,25 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Bbq</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= content_for?(:title) ? yield(:title) : "Bbq" %></title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <%= stylesheet_pack_tag "application", :media => "all" %>
 
-    <%= stylesheet_pack_tag 'application', media: 'all' %>
-    <%= javascript_pack_tag 'application' %>
-  </head>
+  <%= javascript_pack_tag "application" %>
 
-  <body>
+</head>
+<body>
+<div class="container">
+  <%= render "partials/nav" %>
+  <div class="container">
+    <p id="notice"><%= notice %></p>
+  </div>
+  <div class="container">
     <%= yield %>
-  </body>
+  </div>
+</div>
+</body>
 </html>

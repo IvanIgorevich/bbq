@@ -3,7 +3,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :events, dependent: :destroy
 
-  before_validation :set_name, on: :create
+  before_save :set_name
 
   validates :name, presence: true, length: { maximum: 35 }
 

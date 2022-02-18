@@ -4,7 +4,11 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '3.0.3'
 
 gem 'rails', '~> 6.1.4', '>= 6.1.4.1'
+
 gem 'devise'
+gem 'devise-i18n'
+gem 'rails-i18n'
+
 gem 'puma', '~> 5.0'
 gem 'webpacker', '~> 5.0'
 

@@ -3,6 +3,13 @@ class ApplicationController < ActionController::Base
 
   helper_method :current_user_can_edit?
 
+  around_action :switch_locale
+
+  def switch_locale(&action)
+    locale = params[:locale] || I18n.default_locale
+    I18n.with_locale(locale, &action)
+  end
+
   def current_user_can_edit?(event)
     user_signed_in? && event.user == current_user
   end

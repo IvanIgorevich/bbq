@@ -4,4 +4,10 @@
   <div class="col-md-9 mt-3">
     <%= render 'form' %>
   </div>
+  <div class="col-md-3 mt-3">
+    <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+      <%= link_to "Удаление", event_path(@event), class: "btn  btn-outline-danger  btn-sm",
+                  method: :delete, data: { confirm: t('are_you_sure') } %>
+    </div>
+  </div>
 </div>

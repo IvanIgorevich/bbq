@@ -10,8 +10,11 @@ class ApplicationController < ActionController::Base
     I18n.with_locale(locale, &action)
   end
 
-  def current_user_can_edit?(event)
-    user_signed_in? && event.user == current_user
+  def current_user_can_edit?(model)
+    user_signed_in? && (
+      model.user == current_user ||
+        (model.try(:event).present? && model.event.user == current_user)
+    )
   end
 
   def configure_permitted_parameters

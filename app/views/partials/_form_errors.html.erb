@@ -3,7 +3,7 @@
 <% if errors.any? %>
   <div class="alert alert-danger">
     <div class="lead mb-3">
-      В вашей форме <%= errors.count %> ошибок
+      В вашей форме <%= I18n.t :errors, count: errors.count %>
     </div>
 
     <ul>
@@ -11,5 +11,6 @@
         <li><%= "#{error.attribute} #{error.message}" %></li>
       <% end %>
     </ul>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
   </div>
 <% end %>

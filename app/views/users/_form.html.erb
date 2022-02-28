@@ -12,6 +12,12 @@
   </div>
 
   <div class="mb-3">
+    <%= f.label :avatar, class: "form-label fw-bold" %>
+    <p><%= image_tag(@user.avatar.thumb.url) if @user.avatar? %></p>
+    <%= f.file_field :avatar, class: 'form-control' %>
+  </div>
+
+  <div class="mb-3">
     <%= f.submit 'Сохранить', class: 'btn btn-primary' %>
     или <%= link_to 'вернуться', :back %>
   </div>

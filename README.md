@@ -1,24 +1,9 @@
-# README
+# BBQ
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Приложение организатор событий на rails 6.1
 
-Things you may want to cover:
+Рассчитано на работу с Heroku.
 
-* Ruby version
+Использован фраемворк Bootstrap, гемы devise, carrierwave.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+[Демо на Heroku](https://somebbq.herokuapp.com/)

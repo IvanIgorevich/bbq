@@ -12,12 +12,17 @@ gem 'rails-i18n'
 gem 'carrierwave'
 gem 'rmagick'
 
+gem 'aws-sdk-s3', require: false
+gem 'fog-aws'
+gem 'image_processing', '~> 1.2'
+
 gem 'puma', '~> 5.0'
 gem 'webpacker', '~> 5.0'
 
 group :development, :test do
   gem 'sqlite3', '~> 1.4'
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'rubocop', '~> 1.27', require: false
 end
 
 group :development do

@@ -33,10 +33,14 @@ module ApplicationHelper
   end
 
   def user_avatar_thumb(user)
-    if user.avatar.file.present?
-      user.avatar.thumb.url
+    if user.foto.attached?
+      user.foto
     else
-      asset_pack_path('media/images/user.png')
+      if user.avatar.file.present?
+        user.avatar.thumb.url
+      else
+        asset_pack_path('media/images/user.png')
+      end
     end
   end
 end

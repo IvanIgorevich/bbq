@@ -15,7 +15,7 @@ module ApplicationHelper
     photos = event.photos.persisted
 
     if photos.any?
-      photos.sample.photo.url
+      url_for(photos.sample.picture) #photos.sample.photo.url
     else
       asset_pack_path('media/images/event.jpg')
     end
@@ -26,7 +26,7 @@ module ApplicationHelper
     photos = event.photos.persisted
 
     if photos.any?
-      photos.sample.photo.thumb.url
+      photos.sample.picture.variant(resize_to_fit: [100, 100]) #photo.thumb.url
     else
       asset_pack_path('media/images/event_thumb.jpg')
     end

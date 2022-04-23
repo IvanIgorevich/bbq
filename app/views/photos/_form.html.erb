@@ -1,9 +1,14 @@
 <%= form_for [@event, photo], html: { multipart: true } do |f| %>
   <%= render partial: 'partials/form_errors', locals: {model: photo} %>
 
-  <div class="mb-3">
+  <!-- <div class="mb-3">
     <%= f.label :photo, class: "form-label" %>
     <%= f.file_field :photo, class: 'form-control' %>
+  </div> -->
+
+  <div class="mb-3">
+    <%= f.label :picture, class: "form-label" %>
+    <%= f.file_field :picture, class: 'form-control' %>
   </div>
 
   <div class="mb-3">

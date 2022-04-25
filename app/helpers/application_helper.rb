@@ -34,7 +34,7 @@ module ApplicationHelper
 
   def user_avatar_thumb(user)
     if user.foto.attached?
-      url_for(user.foto)
+      user.foto
     else
       if user.avatar.file.present?
         user.avatar.thumb.url

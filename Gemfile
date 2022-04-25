@@ -12,7 +12,7 @@ gem 'rails-i18n'
 gem 'carrierwave'
 gem 'rmagick'
 
-gem 'aws-sdk-s3', require: false
+gem 'aws-sdk-s3'
 gem 'fog-aws'
 gem 'image_processing', '~> 1.2'
 

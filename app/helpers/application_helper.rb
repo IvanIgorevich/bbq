@@ -1,9 +1,13 @@
 module ApplicationHelper
   def user_avatar(user)
-    if user.avatar?
-      user.avatar.url
+    if user.foto.attached?
+      user.foto
     else
-      asset_pack_path('media/images/user.png')
+      if user.avatar?
+        user.avatar.url
+      else
+        asset_pack_path('media/images/user.png')
+      end
     end
   end
 
